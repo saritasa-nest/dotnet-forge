@@ -3,7 +3,9 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Proxies.Internal;
 using Microsoft.EntityFrameworkCore.Query;
+using Saritasa.NetForge.Blazor.Extensions;
 using Saritasa.NetForge.Domain.Dtos;
 using Saritasa.NetForge.Domain.Enums;
 using Saritasa.NetForge.DomainServices.Comparers;
@@ -421,12 +423,13 @@ public class EfCoreDataService : IOrmDataService
         Action<IServiceProvider?, object, object>? afterUpdateAction,
         CancellationToken cancellationToken)
     {
-        var entityType = entity.GetType();
+        var decoratedEntity = new ObjectDecorator(entity);
+        var entityType = decoratedEntity.GetType();
         var dbContext = GetDbContextThatContainsEntity(entityType);
 
         if (afterUpdateAction is not null)
         {
-            var originalEntityClone = originalEntity.CloneJson();
+            var originalEntityClone = originalEntity.CloneObject();
             await UpdateAsync(dbContext, entity, originalEntity, cancellationToken);
 
             afterUpdateAction.Invoke(serviceProvider, originalEntityClone!, originalEntity);

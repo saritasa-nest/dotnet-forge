@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore.Proxies.Internal;
 
 namespace Saritasa.NetForge.DomainServices.Extensions;
 
@@ -41,6 +43,28 @@ public static class CloneExtensions
         var serializedSource = JsonConvert.SerializeObject(source, serializeSettings);
         var sourceType = source.GetType();
         return JsonConvert.DeserializeObject(serializedSource, sourceType, deserializeSettings);
+    }
+
+    /// <summary>
+    /// Perform a deep copy using reflection.
+    /// </summary>
+    /// <param name="source">The object instance to copy.</param>
+    public static object? CloneObject(this object? source)
+    {
+        var cpType = source is IProxyLazyLoader ? source.GetType().BaseType : source.GetType();
+        var clone = Activator.CreateInstance(cpType);
+        var properties = cpType.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+        foreach (var property in properties)
+        {
+            if (property.CanRead && property.CanWrite)
+            {
+                var value = property.GetValue(source);
+                property.SetValue(clone, value);
+            }
+        }
+
+        return clone;
     }
 }
 

@@ -92,7 +92,7 @@ public class EditEntityViewModel : ValidationEntityViewModel
             Model.EntityInstance = await dataService
                 .GetInstanceAsync(InstancePrimaryKey, Model.ClrType!, includedNavigationNames, CancellationToken);
 
-            Model.OriginalEntityInstance = Model.EntityInstance.CloneJson();
+            Model.OriginalEntityInstance = Model.EntityInstance.CloneObject();
 
             FieldErrorModels = Model.Properties
                 .Select(property => new FieldErrorModel
@@ -169,7 +169,7 @@ public class EditEntityViewModel : ValidationEntityViewModel
 
             // We do clone because UpdateAsync method returns Model.OriginalEntityInstance
             // so we don't want Model.EntityInstance and Model.OriginalEntityInstance to have the same reference.
-            Model.EntityInstance = updatedEntity.CloneJson();
+            Model.EntityInstance = updatedEntity.CloneObject();
             snackbar.Add("Update was completed successfully", Severity.Success);
         }
         catch (Exception ex)
