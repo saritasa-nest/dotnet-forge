@@ -211,6 +211,11 @@ public partial class EntityPropertyColumns : ComponentBase
     {
         try
         {
+            if (AdminOptions.CallbackOptions.PreDelete is not null)
+            {
+                await AdminOptions.CallbackOptions.PreDelete.Invoke(cancellationToken);
+            }
+
             await EntityService.DeleteEntityAsync(entity, entity.GetType(), cancellationToken);
 
             DataGrid?.ReloadServerData();

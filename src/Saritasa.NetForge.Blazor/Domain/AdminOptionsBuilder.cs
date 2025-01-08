@@ -287,4 +287,15 @@ public class AdminOptionsBuilder
         options.CustomHeadType = headType;
         return this;
     }
+
+    /// <summary>
+    /// Configures callback options for entity lifecycle events.
+    /// </summary>
+    /// <param name="entityCallbackAction">An action to configure the entity callback options.</param>
+    /// <returns>The current instance of <see cref="AdminOptionsBuilder"/>.</returns>
+    public AdminOptionsBuilder ConfigureCallback(Action<EntityCallbackOptions> entityCallbackAction)
+    {
+        entityCallbackAction.Invoke(options.CallbackOptions);
+        return this;
+    }
 }
