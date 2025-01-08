@@ -1,4 +1,5 @@
 ﻿using MudBlazor;
+using Saritasa.NetForge.Domain.Entities.Options;
 using Saritasa.NetForge.Domain.Enums;
 using Saritasa.NetForge.Domain.Exceptions;
 using Saritasa.NetForge.UseCases.Common;
@@ -18,15 +19,17 @@ public class EntityDetailsViewModel : BaseViewModel
     public EntityDetailsModel Model { get; private set; }
 
     private readonly IEntityService entityService;
+    private readonly AdminOptions adminOptions;
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public EntityDetailsViewModel(string stringId, IEntityService entityService)
+    public EntityDetailsViewModel(string stringId, IEntityService entityService, AdminOptions adminOptions)
     {
         Model = new EntityDetailsModel { StringId = stringId };
 
         this.entityService = entityService;
+        this.adminOptions = adminOptions;
     }
 
     /// <summary>
@@ -191,6 +194,11 @@ public class EntityDetailsViewModel : BaseViewModel
     /// </summary>
     public async Task DeleteSelectedEntitiesAsync(CancellationToken cancellationToken)
     {
+        if (adminOptions.CallbackOptions.PreDelete is not null)
+        {
+            await adminOptions.CallbackOptions.PreDelete.Invoke(cancellationToken);
+        }
+
         await entityService.DeleteEntitiesAsync(
             SelectedEntities, SelectedEntities.First().GetType(), cancellationToken);
 

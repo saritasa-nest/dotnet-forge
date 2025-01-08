@@ -6,8 +6,8 @@ using Saritasa.NetForge.UseCases.Interfaces;
 using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
 using System.ComponentModel.DataAnnotations;
 using Saritasa.NetForge.Mvvm.Utils;
-using Microsoft.Extensions.Logging;
 using MudBlazor;
+using Saritasa.NetForge.Domain.Entities.Options;
 
 namespace Saritasa.NetForge.Mvvm.ViewModels.EditEntity;
 
@@ -31,6 +31,7 @@ public class EditEntityViewModel : ValidationEntityViewModel
     private readonly IOrmDataService dataService;
     private readonly IServiceProvider serviceProvider;
     private readonly ISnackbar snackbar;
+    private readonly AdminOptions adminOptions;
 
     /// <summary>
     /// Constructor.
@@ -42,7 +43,8 @@ public class EditEntityViewModel : ValidationEntityViewModel
         IEntityService entityService,
         IOrmDataService dataService,
         IServiceProvider serviceProvider,
-        ISnackbar snackbar)
+        ISnackbar snackbar,
+        AdminOptions adminOptions)
     {
         Model = new EditEntityModel { StringId = stringId };
         InstancePrimaryKey = instancePrimaryKey;
@@ -52,6 +54,7 @@ public class EditEntityViewModel : ValidationEntityViewModel
         this.dataService = dataService;
         this.serviceProvider = serviceProvider;
         this.snackbar = snackbar;
+        this.adminOptions = adminOptions;
     }
 
     /// <summary>
@@ -164,6 +167,11 @@ public class EditEntityViewModel : ValidationEntityViewModel
 
         try
         {
+            if (adminOptions.CallbackOptions.PreEdit is not null)
+            {
+                await adminOptions.CallbackOptions.PreEdit.Invoke(CancellationToken);
+            }
+
             var updatedEntity = await dataService
                 .UpdateAsync(Model.EntityInstance!, Model.OriginalEntityInstance!, Model.AfterUpdateAction, CancellationToken);
 
