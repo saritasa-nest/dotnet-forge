@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
-using Saritasa.NetForge.Mvvm.ViewModels;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 namespace Saritasa.NetForge.Blazor.Controls.CustomFields;
 

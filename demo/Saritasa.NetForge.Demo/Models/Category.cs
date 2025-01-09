@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Demo.Net7.Models;
+﻿namespace Saritasa.NetForge.Demo.Models;
 
 /// <summary>
 /// Product category.

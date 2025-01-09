@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Saritasa.NetForge.Mvvm.ViewModels;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 namespace Saritasa.NetForge.Blazor.Pages;
 

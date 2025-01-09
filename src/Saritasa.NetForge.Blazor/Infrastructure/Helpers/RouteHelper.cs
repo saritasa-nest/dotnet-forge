@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Routing.Template;
-using Saritasa.NetForge.Domain.Exceptions;
+using Saritasa.NetForge.Blazor.Domain.Exceptions;
 
 namespace Saritasa.NetForge.Blazor.Infrastructure.Helpers;
 

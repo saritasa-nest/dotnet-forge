@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.DomainServices.Extensions;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Extensions;
 
 /// <summary>
 /// Contains methods that work with reflection.

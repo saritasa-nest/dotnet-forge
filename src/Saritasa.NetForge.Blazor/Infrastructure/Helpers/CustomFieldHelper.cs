@@ -1,6 +1,6 @@
 ﻿using Saritasa.NetForge.Blazor.Controls.CustomFields;
 using Saritasa.NetForge.Blazor.Controls.CustomFields.DateTimeFields;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 
 namespace Saritasa.NetForge.Blazor.Infrastructure.Helpers;
 

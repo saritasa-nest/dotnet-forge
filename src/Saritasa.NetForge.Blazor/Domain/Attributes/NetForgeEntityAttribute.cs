@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Domain.Attributes;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Attributes;
 
 /// <summary>
 /// Represents an attribute used to provide metadata for the entity.

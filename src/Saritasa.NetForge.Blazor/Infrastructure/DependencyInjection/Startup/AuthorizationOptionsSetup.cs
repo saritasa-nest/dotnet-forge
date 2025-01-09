@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Saritasa.NetForge.Blazor.Constants;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
 using Saritasa.NetForge.Blazor.Infrastructure.Authentication;
-using Saritasa.NetForge.Domain.Entities.Options;
 
 namespace Saritasa.NetForge.Blazor.Infrastructure.DependencyInjection.Startup;
 

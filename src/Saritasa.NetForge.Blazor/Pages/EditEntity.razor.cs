@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using MudBlazor;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.Mvvm.Navigation;
-using Saritasa.NetForge.Mvvm.ViewModels.EditEntity;
-using Saritasa.NetForge.Mvvm.ViewModels.EntityDetails;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.MVVM.Navigation;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels.EditEntity;
 
 namespace Saritasa.NetForge.Blazor.Pages;
 

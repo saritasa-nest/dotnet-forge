@@ -1,9 +1,9 @@
-﻿using Saritasa.NetForge.Domain.Attributes;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.DomainServices.Interfaces;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+﻿using Saritasa.NetForge.Blazor.Domain.Attributes;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.Interfaces;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
-namespace Saritasa.NetForge.DomainServices;
+namespace Saritasa.NetForge.Blazor.Domain;
 
 /// <summary>
 /// Builds the admin options.

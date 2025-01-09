@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Domain.Exceptions;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Exceptions;
 
 /// <summary>
 /// Entity Not Found Exception.

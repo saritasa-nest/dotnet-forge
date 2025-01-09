@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+﻿namespace Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
 /// <summary>
 /// Represents a contract for injecting ORM-specific services into the admin panel.

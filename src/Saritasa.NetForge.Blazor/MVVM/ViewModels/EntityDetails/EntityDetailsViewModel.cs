@@ -1,11 +1,11 @@
 ﻿using MudBlazor;
-using Saritasa.NetForge.Domain.Enums;
-using Saritasa.NetForge.Domain.Exceptions;
-using Saritasa.NetForge.UseCases.Common;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Domain.Enums;
+using Saritasa.NetForge.Blazor.Domain.Exceptions;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Common;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 
-namespace Saritasa.NetForge.Mvvm.ViewModels.EntityDetails;
+namespace Saritasa.NetForge.Blazor.MVVM.ViewModels.EntityDetails;
 
 /// <summary>
 /// ViewModel representing details of an entity.

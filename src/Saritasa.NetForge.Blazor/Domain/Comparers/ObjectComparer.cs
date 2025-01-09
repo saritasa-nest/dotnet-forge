@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.DomainServices.Comparers;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Comparers;
 
 /// <summary>
 /// Comparer for objects. Uses their <see cref="object.ToString()"/> methods.

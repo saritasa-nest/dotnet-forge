@@ -1,11 +1,12 @@
 ﻿@using Saritasa.NetForge.Blazor.Controls
 @using Saritasa.NetForge.Blazor.Controls.CustomFields
+@using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById
 @using Saritasa.NetForge.Blazor.Extensions
 @using Saritasa.NetForge.Blazor.Infrastructure.Helpers
-@using Saritasa.NetForge.Mvvm.ViewModels
-@using Saritasa.NetForge.UseCases.Metadata.GetEntityById
+@using Saritasa.NetForge.Blazor.MVVM.ViewModels
+@using Saritasa.NetForge.Blazor.MVVM.ViewModels.CreateEntity
 
-@inherits MvvmComponentBase<Saritasa.NetForge.Mvvm.ViewModels.CreateEntity.CreateEntityViewModel>
+@inherits MvvmComponentBase<CreateEntityViewModel>
 
 @if (ViewModel.IsEntityExists)
 {
@@ -76,5 +77,5 @@
 }
 else
 {
-    <NotFound />
+    <NotFound/>
 }

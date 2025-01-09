@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.UseCases.Constants;
+﻿namespace Saritasa.NetForge.Blazor.Domain.UseCases.Constants;
 
 /// <summary>
 /// Constants for default values.

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Saritasa.NetForge.Mvvm.ViewModels;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
-namespace Saritasa.NetForge.Mvvm.Utils;
+namespace Saritasa.NetForge.Blazor.MVVM.Utils;
 
 /// <summary>
 /// Error utility class for mapping validation errors.

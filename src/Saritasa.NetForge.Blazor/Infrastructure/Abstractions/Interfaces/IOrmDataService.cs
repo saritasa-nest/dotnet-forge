@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Domain.Dtos;
+﻿using Saritasa.NetForge.Blazor.Domain.Dtos;
 
-namespace Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+namespace Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
 /// <summary>
 /// Service for retrieving data from ORM.

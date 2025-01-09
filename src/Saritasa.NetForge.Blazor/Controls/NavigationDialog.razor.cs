@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using MudBlazor;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 
 namespace Saritasa.NetForge.Blazor.Controls;
 

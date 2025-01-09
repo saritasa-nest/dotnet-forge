@@ -1,8 +1,8 @@
 ﻿using System.Linq.Expressions;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.DomainServices.Extensions;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.Extensions;
 
-namespace Saritasa.NetForge.DomainServices;
+namespace Saritasa.NetForge.Blazor.Domain;
 
 /// <summary>
 /// Builder class for configuring entity's navigation options.

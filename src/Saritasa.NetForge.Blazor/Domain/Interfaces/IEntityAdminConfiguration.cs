@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.DomainServices.Interfaces;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Interfaces;
 
 /// <summary>
 /// Represents an interface for configuring the admin settings of a specific entity type.

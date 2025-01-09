@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Saritasa.NetForge.Blazor.Extensions;
-using Saritasa.NetForge.Infrastructure.EfCore.Extensions;
+using Saritasa.NetForge.Blazor.Infrastructure.EfCore.Extensions;
 using Saritasa.NetForge.Tests.Domain;
 using Xunit.Microsoft.DependencyInjection;
 using Xunit.Microsoft.DependencyInjection.Abstracts;

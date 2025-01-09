@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
-namespace Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+namespace Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 
 /// <summary>
 /// DTO for <see cref="EntityMetadata"/>.

@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Domain.Entities.Options;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Entities.Options;
 
 /// <summary>
 /// Group for entities.

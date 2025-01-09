@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.DomainServices.Extensions;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Extensions;
 
 /// <summary>
 /// <see cref="string"/> extensions.

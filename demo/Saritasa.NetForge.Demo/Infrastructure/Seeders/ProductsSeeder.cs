@@ -1,6 +1,5 @@
 ﻿using Bogus;
 using Saritasa.NetForge.Demo.Models;
-using Saritasa.NetForge.Demo.Net7.Models;
 
 namespace Saritasa.NetForge.Demo.Infrastructure.Seeders;
 

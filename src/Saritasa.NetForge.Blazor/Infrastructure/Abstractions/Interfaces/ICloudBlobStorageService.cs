@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+﻿namespace Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
 /// <summary>
 /// Contains methods for interacting

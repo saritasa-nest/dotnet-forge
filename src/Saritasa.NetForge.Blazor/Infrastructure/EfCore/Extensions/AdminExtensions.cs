@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.DomainServices;
+﻿using Saritasa.NetForge.Blazor.Domain;
 
-namespace Saritasa.NetForge.Infrastructure.EfCore.Extensions;
+namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore.Extensions;
 
 /// <summary>
 /// Provides extension methods to configure the admin panel with EF Core.

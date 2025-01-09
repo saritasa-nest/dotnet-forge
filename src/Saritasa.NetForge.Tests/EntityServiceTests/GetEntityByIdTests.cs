@@ -1,16 +1,16 @@
 ﻿using System.ComponentModel;
 using Moq;
-using Saritasa.NetForge.Domain.Attributes;
-using Saritasa.NetForge.Domain.Exceptions;
-using Saritasa.NetForge.DomainServices;
+using Saritasa.NetForge.Blazor.Domain;
+using Saritasa.NetForge.Blazor.Domain.Attributes;
+using Saritasa.NetForge.Blazor.Domain.Exceptions;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.Services;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Services;
 using Saritasa.NetForge.Tests.Domain;
 using Saritasa.NetForge.Tests.Domain.Constants;
 using Saritasa.NetForge.Tests.Domain.Models;
 using Saritasa.NetForge.Tests.Helpers;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
-using Saritasa.NetForge.UseCases.Metadata.Services;
-using Saritasa.NetForge.UseCases.Services;
 using Xunit;
 
 namespace Saritasa.NetForge.Tests.EntityServiceTests;

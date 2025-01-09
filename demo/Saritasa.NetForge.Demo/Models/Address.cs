@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using Saritasa.NetForge.Blazor.Domain.Attributes;
+using Saritasa.NetForge.Blazor.Domain.Enums;
 using Saritasa.NetForge.Demo.Constants;
-using Saritasa.NetForge.Domain.Attributes;
-using Saritasa.NetForge.Domain.Enums;
 
 namespace Saritasa.NetForge.Demo.Models;
 

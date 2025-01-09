@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Domain.Entities.Options;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
 
-namespace Saritasa.NetForge.DomainServices.Extensions;
+namespace Saritasa.NetForge.Blazor.Domain.Extensions;
 
 /// <summary>
 /// Provides extension methods for assigning entity groups to the entity.

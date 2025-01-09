@@ -1,4 +1,4 @@
-﻿using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+﻿using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 using Saritasa.NetForge.Tests.Domain;
 using Saritasa.NetForge.Tests.Helpers;
 using Xunit;

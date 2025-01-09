@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
-namespace Saritasa.NetForge.Infrastructure.EfCore.Services;
+namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore.Services;
 
 /// <inheritdoc/>
 public class EfCoreMetadataService : IOrmMetadataService

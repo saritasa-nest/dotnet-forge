@@ -1,5 +1,5 @@
-﻿using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.DomainServices;
+﻿using Saritasa.NetForge.Blazor.Domain;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
 using Xunit;
 
 namespace Saritasa.NetForge.Tests;

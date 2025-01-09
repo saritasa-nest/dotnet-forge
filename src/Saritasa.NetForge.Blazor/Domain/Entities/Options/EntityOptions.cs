@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
-namespace Saritasa.NetForge.Domain.Entities.Options;
+namespace Saritasa.NetForge.Blazor.Domain.Entities.Options;
 
 /// <summary>
 /// Configure entity in the admin panel.

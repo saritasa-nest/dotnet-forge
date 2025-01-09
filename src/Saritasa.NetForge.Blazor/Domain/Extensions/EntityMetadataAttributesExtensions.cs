@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Reflection;
-using Saritasa.NetForge.Domain.Attributes;
-using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.Domain.Enums;
+using Saritasa.NetForge.Blazor.Domain.Attributes;
+using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.Enums;
 
-namespace Saritasa.NetForge.DomainServices.Extensions;
+namespace Saritasa.NetForge.Blazor.Domain.Extensions;
 
 /// <summary>
 /// Provides extension methods to apply attributes to <see cref="EntityMetadata"/>.

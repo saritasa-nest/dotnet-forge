@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Domain.Entities.Metadata;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
 /// <summary>
 /// Represents metadata about a navigation of an entity model.

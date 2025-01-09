@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 
-namespace Saritasa.NetForge.Mvvm.ViewModels.EditEntity;
+namespace Saritasa.NetForge.Blazor.MVVM.ViewModels.EditEntity;
 
 /// <summary>
 /// Model for edit entity page.

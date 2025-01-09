@@ -1,21 +1,21 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
-using Saritasa.NetForge.Domain.Dtos;
-using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Domain.Enums;
-using Saritasa.NetForge.Domain.Exceptions;
-using Saritasa.NetForge.DomainServices.Extensions;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
-using Saritasa.NetForge.UseCases.Common;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.DTOs;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
-using Saritasa.NetForge.UseCases.Metadata.Services;
+using Saritasa.NetForge.Blazor.Domain.Dtos;
+using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.Enums;
+using Saritasa.NetForge.Blazor.Domain.Exceptions;
+using Saritasa.NetForge.Blazor.Domain.Extensions;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Common;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.DTOs;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.Services;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 using Saritasa.Tools.Common.Pagination;
 using Saritasa.Tools.Common.Utils;
 
-namespace Saritasa.NetForge.UseCases.Services;
+namespace Saritasa.NetForge.Blazor.Domain.UseCases.Services;
 
 /// <inheritdoc />
 public class EntityService : IEntityService

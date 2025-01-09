@@ -1,6 +1,8 @@
-﻿@using Saritasa.NetForge.UseCases.Metadata.DTOs
-@using Saritasa.NetForge.Mvvm.Navigation
-@inherits Saritasa.NetForge.Blazor.Pages.MvvmComponentBase<Saritasa.NetForge.Mvvm.ViewModels.EntitiesViewModel>
+﻿@using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.DTOs
+@using Saritasa.NetForge.Blazor.MVVM.Navigation
+@using Saritasa.NetForge.Blazor.MVVM.ViewModels
+
+@inherits Saritasa.NetForge.Blazor.Pages.MvvmComponentBase<EntitiesViewModel>
 @inject INavigationService NavigationService;
 
 @if (ViewModel.HasEntities) {

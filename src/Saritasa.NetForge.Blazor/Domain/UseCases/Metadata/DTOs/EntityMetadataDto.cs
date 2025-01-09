@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Domain.Entities.Options;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
 
-namespace Saritasa.NetForge.UseCases.Metadata.DTOs;
+namespace Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.DTOs;
 
 /// <summary>
 /// Represents entity metadata DTO.

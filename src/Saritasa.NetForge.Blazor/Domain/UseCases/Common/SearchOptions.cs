@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Saritasa.Tools.Common.Pagination;
 
-namespace Saritasa.NetForge.UseCases.Common;
+namespace Saritasa.NetForge.Blazor.Domain.UseCases.Common;
 
 /// <summary>
 /// Search options that contains page and page size.

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 
-namespace Saritasa.NetForge.Domain;
+namespace Saritasa.NetForge.Blazor.Domain;
 
 /// <summary>
 /// Upload file strategy.

@@ -4,15 +4,15 @@ using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Query;
-using Saritasa.NetForge.Domain.Dtos;
-using Saritasa.NetForge.Domain.Enums;
-using Saritasa.NetForge.DomainServices.Comparers;
-using Saritasa.NetForge.DomainServices.Extensions;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
-using Saritasa.NetForge.Infrastructure.EfCore.Extensions;
-using ExpressionExtensions = Saritasa.NetForge.DomainServices.Extensions.ExpressionExtensions;
+using Saritasa.NetForge.Blazor.Domain.Comparers;
+using Saritasa.NetForge.Blazor.Domain.Dtos;
+using Saritasa.NetForge.Blazor.Domain.Enums;
+using Saritasa.NetForge.Blazor.Domain.Extensions;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.Infrastructure.EfCore.Extensions;
+using ExpressionExtensions = Saritasa.NetForge.Blazor.Domain.Extensions.ExpressionExtensions;
 
-namespace Saritasa.NetForge.Infrastructure.EfCore.Services;
+namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore.Services;
 
 /// <summary>
 /// Data service for EF core.

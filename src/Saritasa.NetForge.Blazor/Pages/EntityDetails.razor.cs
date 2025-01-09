@@ -2,11 +2,10 @@
 using MudBlazor;
 using Saritasa.NetForge.Blazor.Controls;
 using Saritasa.NetForge.Blazor.Infrastructure.Helpers;
-using Saritasa.NetForge.DomainServices.Extensions;
-using Saritasa.NetForge.Mvvm.Navigation;
-using Saritasa.NetForge.Mvvm.ViewModels.CreateEntity;
-using Saritasa.NetForge.Mvvm.ViewModels.EditEntity;
-using Saritasa.NetForge.Mvvm.ViewModels.EntityDetails;
+using Saritasa.NetForge.Blazor.MVVM.Navigation;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels.CreateEntity;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels.EditEntity;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels.EntityDetails;
 
 namespace Saritasa.NetForge.Blazor.Pages;
 

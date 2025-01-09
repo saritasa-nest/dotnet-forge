@@ -1,11 +1,11 @@
 ﻿using MudBlazor.Services;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Services;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 using Saritasa.NetForge.Blazor.Infrastructure.Navigation;
 using Saritasa.NetForge.Blazor.Infrastructure.Services;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
-using Saritasa.NetForge.Mvvm.Navigation;
-using Saritasa.NetForge.Mvvm.ViewModels;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Services;
+using Saritasa.NetForge.Blazor.MVVM.Navigation;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 namespace Saritasa.NetForge.Blazor.Infrastructure.DependencyInjection;
 

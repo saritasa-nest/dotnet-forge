@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Mvvm.Utils;
+﻿namespace Saritasa.NetForge.Blazor.MVVM.Utils;
 
 /// <summary>
 /// A utility class for formatting data values based on display format patterns.

@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.DTOs;
+﻿using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.DTOs;
 
-namespace Saritasa.NetForge.Mvvm.ViewModels;
+namespace Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 /// <summary>
 /// ViewModel representing entities metadata in the admin panel.

@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.Extensions;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Constants;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 using Saritasa.NetForge.Blazor.Infrastructure.Helpers;
+using Saritasa.NetForge.Blazor.MVVM.Navigation;
+using Saritasa.NetForge.Blazor.MVVM.Utils;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels.EditEntity;
 using Saritasa.NetForge.Blazor.Pages;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.DomainServices.Extensions;
-using Saritasa.NetForge.Mvvm.Navigation;
-using Saritasa.NetForge.Mvvm.Utils;
-using Saritasa.NetForge.Mvvm.ViewModels.EditEntity;
-using Saritasa.NetForge.UseCases.Constants;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
 
 namespace Saritasa.NetForge.Blazor.Controls;
 

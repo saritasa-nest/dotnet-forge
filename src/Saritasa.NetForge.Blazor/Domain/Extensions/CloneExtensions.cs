@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Saritasa.NetForge.DomainServices.Extensions;
+namespace Saritasa.NetForge.Blazor.Domain.Extensions;
 
 /// <summary>
 /// Contains methods to make clone of objects.

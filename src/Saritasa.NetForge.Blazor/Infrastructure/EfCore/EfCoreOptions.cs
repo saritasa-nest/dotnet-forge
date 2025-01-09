@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Infrastructure.EfCore;
+﻿namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore;
 
 /// <summary>
 /// EF Core options for the admin panel.

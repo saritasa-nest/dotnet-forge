@@ -1,4 +1,4 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
 namespace Saritasa.NetForge.Blazor.Controls.CustomFields;
 

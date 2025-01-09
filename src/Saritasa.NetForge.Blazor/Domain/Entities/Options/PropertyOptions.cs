@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Domain.Enums;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.Enums;
 
-namespace Saritasa.NetForge.Domain.Entities.Options;
+namespace Saritasa.NetForge.Blazor.Domain.Entities.Options;
 
 /// <summary>
 /// Options for entity property.

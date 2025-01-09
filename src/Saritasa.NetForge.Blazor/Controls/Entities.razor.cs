@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Components;
 using MudBlazor;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.DTOs;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels.EntityDetails;
 using Saritasa.NetForge.Blazor.Pages;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.Mvvm.ViewModels;
-using Saritasa.NetForge.Mvvm.ViewModels.EntityDetails;
-using Saritasa.NetForge.UseCases.Metadata.DTOs;
 
 namespace Saritasa.NetForge.Blazor.Controls;
 

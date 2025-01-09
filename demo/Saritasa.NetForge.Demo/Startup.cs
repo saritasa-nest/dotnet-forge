@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Saritasa.NetForge.Blazor.Extensions;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 using Saritasa.NetForge.Demo.Infrastructure.Startup;
 using Saritasa.NetForge.Demo.Infrastructure.Startup.HealthCheck;
 using Saritasa.NetForge.Demo.Infrastructure.UploadFiles.S3Storage;
 using Saritasa.NetForge.Demo.Models;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
 
 namespace Saritasa.NetForge.Demo;
 

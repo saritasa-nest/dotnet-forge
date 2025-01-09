@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Saritasa.NetForge.Blazor.Constants;
+using Saritasa.NetForge.Blazor.Domain;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.Services;
 using Saritasa.NetForge.Blazor.Infrastructure.Authentication;
 using Saritasa.NetForge.Blazor.Infrastructure.DependencyInjection.Startup;
 using Saritasa.NetForge.Blazor.Infrastructure.Helpers;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.DomainServices;
-using Saritasa.NetForge.UseCases.Metadata.Services;
 
 namespace Saritasa.NetForge.Blazor.Extensions;
 

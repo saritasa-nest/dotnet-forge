@@ -1,13 +1,13 @@
 ﻿using System.Reflection;
 using Microsoft.Extensions.Caching.Memory;
 using PluralizeService.Core;
-using Saritasa.NetForge.Domain.Attributes;
-using Saritasa.NetForge.Domain.Entities.Metadata;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.DomainServices.Extensions;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.Attributes;
+using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
+using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.Extensions;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
-namespace Saritasa.NetForge.UseCases.Metadata.Services;
+namespace Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.Services;
 
 /// <summary>
 /// Provides methods for retrieving entities metadata.

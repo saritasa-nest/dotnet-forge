@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Domain.Exceptions;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Exceptions;
 
 /// <summary>
 /// The exception represents the business logic or validation exception.

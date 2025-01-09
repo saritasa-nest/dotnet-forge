@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace Saritasa.NetForge.Mvvm.ViewModels;
+﻿namespace Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 /// <summary>
 /// View model factory.

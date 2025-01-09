@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Mvvm.ViewModels;
+﻿namespace Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 /// <summary>
 /// Validation entity view model.

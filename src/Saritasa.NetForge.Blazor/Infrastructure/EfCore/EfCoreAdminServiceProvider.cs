@@ -1,9 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
-using Saritasa.NetForge.Infrastructure.EfCore.Services;
+﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.Infrastructure.EfCore.Services;
 
-namespace Saritasa.NetForge.Infrastructure.EfCore;
+namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore;
 
 /// <inheritdoc />
 public class EfCoreAdminServiceProvider : IAdminOrmServiceProvider

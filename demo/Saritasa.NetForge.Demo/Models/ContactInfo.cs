@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using Saritasa.NetForge.Blazor.Domain.Attributes;
 using Saritasa.NetForge.Demo.Constants;
-using Saritasa.NetForge.Domain.Attributes;
 
 namespace Saritasa.NetForge.Demo.Models;
 

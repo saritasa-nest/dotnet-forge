@@ -6,9 +6,9 @@ using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using Amazon.S3.Util;
 using Microsoft.Extensions.Options;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 using Saritasa.Tools.Domain.Exceptions;
-using NotFoundException = Saritasa.NetForge.Domain.Exceptions.NotFoundException;
+using NotFoundException = Saritasa.NetForge.Blazor.Domain.Exceptions.NotFoundException;
 
 namespace Saritasa.NetForge.Demo.Infrastructure.UploadFiles.S3Storage;
 

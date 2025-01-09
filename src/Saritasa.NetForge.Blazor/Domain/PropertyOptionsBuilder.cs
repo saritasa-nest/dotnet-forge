@@ -1,8 +1,7 @@
-﻿using Saritasa.NetForge.Domain;
-using Saritasa.NetForge.Domain.Entities.Options;
-using Saritasa.NetForge.Domain.Enums;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Blazor.Domain.Enums;
 
-namespace Saritasa.NetForge.DomainServices;
+namespace Saritasa.NetForge.Blazor.Domain;
 
 /// <summary>
 /// Builder class for configuring entity's property options.

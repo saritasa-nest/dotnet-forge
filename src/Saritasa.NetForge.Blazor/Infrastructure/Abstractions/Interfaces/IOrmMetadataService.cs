@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
-namespace Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
+namespace Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
 
 /// <summary>
 /// Provides a contract for retrieving ORM-specific metadata for entities.

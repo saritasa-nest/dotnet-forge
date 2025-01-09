@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Domain.Entities.Options;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Options;
 
-namespace Saritasa.NetForge.Domain.Entities.Metadata;
+namespace Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
 /// <summary>
 /// Metadata of the Database Entity.

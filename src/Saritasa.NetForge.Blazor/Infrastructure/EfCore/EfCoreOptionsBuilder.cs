@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Saritasa.NetForge.Infrastructure.EfCore;
+namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore;
 
 /// <summary>
 /// Builds EF Core specific options for the admin panel.

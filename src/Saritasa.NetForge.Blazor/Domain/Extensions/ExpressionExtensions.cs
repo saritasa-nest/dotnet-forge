@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Saritasa.NetForge.DomainServices.Extensions;
+namespace Saritasa.NetForge.Blazor.Domain.Extensions;
 
 /// <summary>
 /// Extensions to expressions.

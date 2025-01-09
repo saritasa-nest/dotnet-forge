@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using Microsoft.AspNetCore.Components;
 using Saritasa.NetForge.Blazor.Infrastructure.Helpers;
+using Saritasa.NetForge.Blazor.MVVM.Navigation;
+using Saritasa.NetForge.Blazor.MVVM.ViewModels;
 using Saritasa.NetForge.Blazor.Pages;
-using Saritasa.NetForge.Mvvm.Navigation;
-using Saritasa.NetForge.Mvvm.ViewModels;
 
 namespace Saritasa.NetForge.Blazor.Infrastructure.Navigation;
 

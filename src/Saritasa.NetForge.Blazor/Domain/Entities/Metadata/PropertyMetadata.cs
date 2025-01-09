@@ -1,6 +1,4 @@
-﻿using Saritasa.NetForge.Domain.Entities.Options;
-
-namespace Saritasa.NetForge.Domain.Entities.Metadata;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
 /// <summary>
 /// Represents metadata about a property of an entity model.

@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.UseCases.Common;
+﻿namespace Saritasa.NetForge.Blazor.Domain.UseCases.Common;
 
 /// <summary>
 /// DTO for ordering.

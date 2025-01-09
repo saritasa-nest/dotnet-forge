@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.Demo.Models;
-using Saritasa.NetForge.Domain.Enums;
-using Saritasa.NetForge.DomainServices;
-using Saritasa.NetForge.DomainServices.Interfaces;
+﻿using Saritasa.NetForge.Blazor.Domain;
+using Saritasa.NetForge.Blazor.Domain.Enums;
+using Saritasa.NetForge.Blazor.Domain.Interfaces;
+using Saritasa.NetForge.Demo.Models;
 
 namespace Saritasa.NetForge.Demo.Infrastructure.Admin;
 

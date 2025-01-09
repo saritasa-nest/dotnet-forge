@@ -1,7 +1,7 @@
-﻿using Saritasa.NetForge.Demo.Constants;
+﻿using Saritasa.NetForge.Blazor.Domain;
+using Saritasa.NetForge.Blazor.Domain.Interfaces;
+using Saritasa.NetForge.Demo.Constants;
 using Saritasa.NetForge.Demo.Models;
-using Saritasa.NetForge.DomainServices;
-using Saritasa.NetForge.DomainServices.Interfaces;
 
 namespace Saritasa.NetForge.Demo.Infrastructure.Admin;
 

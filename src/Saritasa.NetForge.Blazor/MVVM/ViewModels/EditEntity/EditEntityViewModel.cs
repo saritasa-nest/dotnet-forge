@@ -1,15 +1,14 @@
-﻿using Saritasa.NetForge.Domain.Exceptions;
+﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Components.Forms;
-using Saritasa.NetForge.DomainServices.Extensions;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
-using Saritasa.NetForge.UseCases.Interfaces;
-using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
-using System.ComponentModel.DataAnnotations;
-using Saritasa.NetForge.Mvvm.Utils;
-using Microsoft.Extensions.Logging;
 using MudBlazor;
+using Saritasa.NetForge.Blazor.Domain.Exceptions;
+using Saritasa.NetForge.Blazor.Domain.Extensions;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Interfaces;
+using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Blazor.MVVM.Utils;
 
-namespace Saritasa.NetForge.Mvvm.ViewModels.EditEntity;
+namespace Saritasa.NetForge.Blazor.MVVM.ViewModels.EditEntity;
 
 /// <summary>
 /// View model for edit entity page.

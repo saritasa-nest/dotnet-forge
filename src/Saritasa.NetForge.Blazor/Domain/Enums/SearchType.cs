@@ -1,4 +1,4 @@
-﻿namespace Saritasa.NetForge.Domain.Enums;
+﻿namespace Saritasa.NetForge.Blazor.Domain.Enums;
 
 /// <summary>
 /// Search type.

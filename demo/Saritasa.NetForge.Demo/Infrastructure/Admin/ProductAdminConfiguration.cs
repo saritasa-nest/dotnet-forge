@@ -1,8 +1,8 @@
-﻿using Saritasa.NetForge.Demo.Infrastructure.UploadFiles.Strategies;
+﻿using Saritasa.NetForge.Blazor.Domain;
+using Saritasa.NetForge.Blazor.Domain.Interfaces;
+using Saritasa.NetForge.Blazor.Infrastructure.Abstractions.Interfaces;
+using Saritasa.NetForge.Demo.Infrastructure.UploadFiles.Strategies;
 using Saritasa.NetForge.Demo.Models;
-using Saritasa.NetForge.DomainServices.Interfaces;
-using Saritasa.NetForge.DomainServices;
-using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
 
 namespace Saritasa.NetForge.Demo.Infrastructure.Admin;
 

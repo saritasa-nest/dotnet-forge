@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Domain.Enums;
+﻿using Saritasa.NetForge.Blazor.Domain.Enums;
 
-namespace Saritasa.NetForge.Domain.Dtos;
+namespace Saritasa.NetForge.Blazor.Domain.Dtos;
 
 /// <summary>
 /// Property search DTO.

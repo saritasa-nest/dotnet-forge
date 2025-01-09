@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.UseCases.Metadata.GetEntityById;
+﻿using Saritasa.NetForge.Blazor.Domain.UseCases.Metadata.GetEntityById;
 
-namespace Saritasa.NetForge.Mvvm.ViewModels;
+namespace Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
 /// <summary>
 /// Model to store information about an error related to a component property.

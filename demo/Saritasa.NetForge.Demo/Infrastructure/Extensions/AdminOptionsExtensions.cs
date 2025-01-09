@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Saritasa.NetForge.Blazor.Domain;
 using Saritasa.NetForge.Demo.Constants;
-using Saritasa.NetForge.DomainServices;
 
 namespace Saritasa.NetForge.Demo.Infrastructure.Extensions;
 

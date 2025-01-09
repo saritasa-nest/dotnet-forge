@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Saritasa.NetForge.DomainServices.Comparers;
+using Saritasa.NetForge.Blazor.Domain.Comparers;
 
-namespace Saritasa.NetForge.Infrastructure.EfCore.Extensions;
+namespace Saritasa.NetForge.Blazor.Infrastructure.EfCore.Extensions;
 
 /// <summary>
 /// Database context extensions.

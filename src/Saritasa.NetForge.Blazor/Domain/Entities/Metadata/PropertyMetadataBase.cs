@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using Saritasa.NetForge.Domain.Enums;
+using Saritasa.NetForge.Blazor.Domain.Enums;
 
-namespace Saritasa.NetForge.Domain.Entities.Metadata;
+namespace Saritasa.NetForge.Blazor.Domain.Entities.Metadata;
 
 /// <summary>
 /// Base class for property metadata.

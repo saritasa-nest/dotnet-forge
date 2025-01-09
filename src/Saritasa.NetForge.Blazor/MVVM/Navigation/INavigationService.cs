@@ -1,6 +1,6 @@
-﻿using Saritasa.NetForge.Mvvm.ViewModels;
+﻿using Saritasa.NetForge.Blazor.MVVM.ViewModels;
 
-namespace Saritasa.NetForge.Mvvm.Navigation;
+namespace Saritasa.NetForge.Blazor.MVVM.Navigation;
 
 /// <summary>
 /// Service for navigation between pages.

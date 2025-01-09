@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Saritasa.NetForge.Domain.Attributes;
+using Saritasa.NetForge.Blazor.Domain.Attributes;
 using Saritasa.NetForge.Tests.Domain.Constants;
 
 namespace Saritasa.NetForge.Tests.Domain.Models;
