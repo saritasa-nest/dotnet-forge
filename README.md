@@ -580,19 +580,15 @@ You can sort multiple properties at once. It can be achieved by pressing sort bu
 Sorting can be cancelled by pressing on it with `ALT`.
 
 ## Calculated Properties
+
 Calculated properties are properties that don't have a direct representation in your database but are computed based on other existing properties. These properties can be useful for displaying calculated values in the admin panel.
 
-You can add calculated properties to your entities using the Fluent API:
+They behave like an ordinary property, but have less functionality.
 
 ```csharp
-services.AddNetForge(optionsBuilder =>
+entityOptionsBuilder.ConfigureCalculatedProperty(address => address.FullAddress, propertyBuilder =>
 {
-    optionsBuilder.ConfigureEntity<User>(entityOptionsBuilder =>
-    {
-        entityOptionsBuilder.AddCalculatedProperties(user => user.FullName, user => user.Age);
-    });
-
-    // Other settings...
+    propertyBuilder.SetDisplayName("Full Address");
 });
 ```
 

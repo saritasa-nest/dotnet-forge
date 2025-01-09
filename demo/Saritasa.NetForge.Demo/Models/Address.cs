@@ -53,6 +53,11 @@ public class Address
     public required string Country { get; set; }
 
     /// <summary>
+    /// Full address.
+    /// </summary>
+    public string FullAddress => $"{Country}, {Street}, {City}";
+
+    /// <summary>
     /// The latitude coordinate of the address location.
     /// </summary>
     [NetForgeProperty(Order = 0)]

@@ -64,6 +64,12 @@ public class ShopAdminConfiguration : IEntityAdminConfiguration<Shop>
                         builder
                             .SetOrder(5)
                             .SetShowNavigationDetails(isReadonly: true);
+                    })
+                    .IncludeCalculatedProperty(address => address.FullAddress, builder =>
+                    {
+                        builder
+                            .SetDisplayName("Entire Address")
+                            .SetOrder(6);
                     });
             })
             .IncludeNavigation<Product>(shop => shop.Products, navigationOptionsBuilder =>
@@ -120,7 +126,7 @@ public class ShopAdminConfiguration : IEntityAdminConfiguration<Shop>
             {
                 modifiedEntity.Suppliers[0].IsActive = !modifiedEntity.Suppliers[0].IsActive;
             }
-            
+
             dbContext.SaveChanges();
         });
 
@@ -128,8 +134,6 @@ public class ShopAdminConfiguration : IEntityAdminConfiguration<Shop>
         {
             builder.SetIsHidden(true);
         });
-
-        entityOptionsBuilder.AddCalculatedProperties(shop => shop.SupplierCount);
 
         entityOptionsBuilder.ConfigureProperty(shop => shop.Id, builder => builder.SetIsHidden(true));
     }

@@ -1,4 +1,5 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Domain.Entities.Metadata;
 
 namespace Saritasa.NetForge.Domain.Entities.Options;
 
@@ -16,5 +17,10 @@ public class NavigationOptions
     /// <summary>
     /// Property options for the navigation properties.
     /// </summary>
-    public ICollection<PropertyOptions> PropertyOptions { get; set; } = new List<PropertyOptions>();
+    public ICollection<PropertyOptions> PropertyOptions { get; set; } = [];
+
+    /// <summary>
+    /// Property options for the navigation calculated properties.
+    /// </summary>
+    public ICollection<CalculatedPropertyOptions> CalculatedPropertyOptions { get; set; } = [];
 }

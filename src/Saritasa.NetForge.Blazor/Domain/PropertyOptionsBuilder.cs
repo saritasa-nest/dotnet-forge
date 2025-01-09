@@ -137,7 +137,7 @@ public class PropertyOptionsBuilder
     }
 
     /// <summary>
-    /// Sets the value to display when value of property is empty.
+    /// Sets the value to display the property as HTML.
     /// </summary>
     public PropertyOptionsBuilder SetDisplayAsHtml(bool displayAsHtml)
     {

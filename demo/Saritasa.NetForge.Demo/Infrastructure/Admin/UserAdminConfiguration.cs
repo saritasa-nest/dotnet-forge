@@ -14,7 +14,6 @@ public class UserAdminConfiguration : IEntityAdminConfiguration<User>
     public void Configure(EntityOptionsBuilder<User> entityOptionsBuilder)
     {
         entityOptionsBuilder.SetGroup(GroupConstants.Identity)
-            .AddCalculatedProperties(user => user.FullName, user => user.Age)
             .ConfigureProperty(user => user.FullName, builder => builder.SetOrder(1))
             .ConfigureProperty(user => user.ConcurrencyStamp, builder => builder.SetIsHidden(true))
             .ConfigureProperty(user => user.LockoutEnd, builder => builder.SetIsHidden(true))

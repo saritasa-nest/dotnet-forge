@@ -61,19 +61,69 @@ public class EfCoreMetadataService : IOrmMetadataService
             .Concat<IReadOnlyNavigationBase>(entityType.GetSkipNavigations())
             .Select(GetNavigationMetadata);
 
-        var propertiesMetadata = entityType.GetProperties().Select(GetPropertyMetadata);
         var entityMetadata = new EntityMetadata
         {
             DisplayName = entityType.ShortName(),
             ClrType = entityType.ClrType,
             Description = entityType.GetComment() ?? string.Empty,
             IsHidden = entityType.IsPropertyBag,
-            Properties = propertiesMetadata.ToList(),
+            Properties = GetPropertiesMetadata(entityType),
             Navigations = navigationsMetadata.ToList(),
             IsKeyless = entityType.FindPrimaryKey() is null
         };
 
         return entityMetadata;
+    }
+
+    /// <summary>
+    /// Retrieve metadata for a navigation of an entity type.
+    /// </summary>
+    /// <param name="navigation">The EF Core navigation to retrieve metadata for.</param>
+    /// <returns>A <see cref="PropertyMetadata"/> object containing metadata information for the navigation.</returns>
+    private static NavigationMetadata GetNavigationMetadata(IReadOnlyNavigationBase navigation)
+    {
+        var isNullable = false;
+        if (navigation is IReadOnlySkipNavigation { ForeignKey: not null } skipNavigation)
+        {
+            isNullable = !(skipNavigation.ForeignKey.IsRequired || skipNavigation.ForeignKey.IsRequiredDependent);
+        }
+        else if (navigation is IReadOnlyNavigation readOnlyNavigation)
+        {
+            isNullable = !readOnlyNavigation.ForeignKey.IsRequiredDependent;
+        }
+
+        var navigationMetadata = new NavigationMetadata
+        {
+            Name = navigation.Name,
+            IsCollection = navigation.IsCollection,
+            TargetEntityProperties = GetPropertiesMetadata(navigation.TargetEntityType),
+            PropertyInformation = navigation.PropertyInfo,
+            ClrType = navigation.ClrType,
+            IsNullable = isNullable
+        };
+
+        return navigationMetadata;
+    }
+
+    private static List<PropertyMetadata> GetPropertiesMetadata(IReadOnlyEntityType entityType)
+    {
+        var propertiesMetadata = entityType.GetProperties().Select(GetPropertyMetadata);
+
+        var reflectionProperties = entityType.ClrType
+            .GetProperties()
+            .Where(property => !propertiesMetadata.Any(metadata => metadata.Name == property.Name));
+
+        var calculatedProperties = reflectionProperties
+            .Where(property => property is { CanRead: true, CanWrite: false })
+            .Select(propertyInfo => new PropertyMetadata
+            {
+                Name = propertyInfo.Name,
+                ClrType = propertyInfo.PropertyType,
+                IsEditable = false,
+                PropertyInformation = propertyInfo,
+                IsCalculatedProperty = true
+            });
+        return propertiesMetadata.Union(calculatedProperties).ToList();
     }
 
     /// <summary>
@@ -99,35 +149,5 @@ public class EfCoreMetadataService : IOrmMetadataService
             IsReadOnly = property.PropertyInfo?.SetMethod is null || property.PropertyInfo.SetMethod.IsPrivate
         };
         return propertyMetadata;
-    }
-
-    /// <summary>
-    /// Retrieve metadata for a navigation of an entity type.
-    /// </summary>
-    /// <param name="navigation">The EF Core navigation to retrieve metadata for.</param>
-    /// <returns>A <see cref="PropertyMetadata"/> object containing metadata information for the navigation.</returns>
-    private static NavigationMetadata GetNavigationMetadata(IReadOnlyNavigationBase navigation)
-    {
-        var isNullable = false;
-        if (navigation is IReadOnlySkipNavigation { ForeignKey: not null } skipNavigation)
-        {
-            isNullable = !(skipNavigation.ForeignKey.IsRequired || skipNavigation.ForeignKey.IsRequiredDependent);
-        }
-        else if (navigation is IReadOnlyNavigation readOnlyNavigation)
-        {
-            isNullable = !readOnlyNavigation.ForeignKey.IsRequiredDependent;
-        }
-
-        var navigationMetadata = new NavigationMetadata
-        {
-            Name = navigation.Name,
-            IsCollection = navigation.IsCollection,
-            TargetEntityProperties = navigation.TargetEntityType.GetProperties().Select(GetPropertyMetadata).ToList(),
-            PropertyInformation = navigation.PropertyInfo,
-            ClrType = navigation.ClrType,
-            IsNullable = isNullable
-        };
-
-        return navigationMetadata;
     }
 }

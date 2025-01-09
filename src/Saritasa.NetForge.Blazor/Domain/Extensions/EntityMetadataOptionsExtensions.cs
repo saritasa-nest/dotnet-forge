@@ -1,4 +1,5 @@
-﻿using Saritasa.NetForge.Domain.Entities.Metadata;
+﻿using Saritasa.NetForge.Blazor.Domain.Entities.Options;
+using Saritasa.NetForge.Domain.Entities.Metadata;
 using Saritasa.NetForge.Domain.Entities.Options;
 
 namespace Saritasa.NetForge.DomainServices.Extensions;
@@ -84,6 +85,23 @@ public static class EntityMetadataOptionsExtensions
             navigation?.ApplyPropertyOptions(option);
         }
 
+        foreach (var option in entityOptions.CalculatedPropertyOptions)
+        {
+            var property = entityMetadata.Properties
+                .FirstOrDefault(property => property.Name == option.PropertyName);
+
+            if (property is not null)
+            {
+                property.ApplyCalculatedPropertyOptions(option);
+                continue;
+            }
+
+            var navigation = entityMetadata.Navigations
+                .FirstOrDefault(navigation => navigation.Name == option.PropertyName);
+
+            navigation?.ApplyCalculatedPropertyOptions(option);
+        }
+
         foreach (var navigationOptions in entityOptions.NavigationOptions)
         {
             var navigation = entityMetadata.Navigations
@@ -134,6 +152,8 @@ public static class EntityMetadataOptionsExtensions
             property.EmptyValueDisplay = propertyOptions.EmptyValueDisplay;
         }
 
+        property.DisplayAsHtml = propertyOptions.DisplayAsHtml;
+
         if (propertyOptions.IsReadOnly)
         {
             property.IsReadOnly = propertyOptions.IsReadOnly;
@@ -181,6 +201,42 @@ public static class EntityMetadataOptionsExtensions
         }
     }
 
+    private static void ApplyCalculatedPropertyOptions(
+        this PropertyMetadataBase property, CalculatedPropertyOptions propertyOptions)
+    {
+        property.IsHiddenFromListView = propertyOptions.IsHiddenFromListView;
+
+        if (!string.IsNullOrEmpty(propertyOptions.DisplayName))
+        {
+            property.DisplayName = propertyOptions.DisplayName;
+        }
+
+        if (!string.IsNullOrEmpty(propertyOptions.Description))
+        {
+            property.Description = propertyOptions.Description;
+        }
+
+        if (propertyOptions.Order.HasValue)
+        {
+            property.Order = propertyOptions.Order.Value;
+        }
+
+        property.DisplayFormat = propertyOptions.DisplayFormat ?? property.DisplayFormat;
+        property.FormatProvider = propertyOptions.FormatProvider ?? property.FormatProvider;
+
+        if (!string.IsNullOrEmpty(propertyOptions.EmptyValueDisplay))
+        {
+            property.EmptyValueDisplay = propertyOptions.EmptyValueDisplay;
+        }
+
+        property.DisplayAsHtml = propertyOptions.DisplayAsHtml;
+
+        if (propertyOptions.TruncationMaxCharacters > 0)
+        {
+            property.TruncationMaxCharacters = propertyOptions.TruncationMaxCharacters;
+        }
+    }
+
     private static void ApplyNavigationOptions(
         this NavigationMetadata navigation, NavigationOptions navigationOptions)
     {
@@ -199,8 +255,17 @@ public static class EntityMetadataOptionsExtensions
             property?.ApplyPropertyOptions(propertyOptions);
         }
 
+        foreach (var propertyOptions in navigationOptions.CalculatedPropertyOptions)
+        {
+            var property = navigation.TargetEntityProperties
+                .FirstOrDefault(property => property.Name == propertyOptions.PropertyName);
+
+            property?.ApplyCalculatedPropertyOptions(propertyOptions);
+        }
+
         var notIncludedProperties = navigation.TargetEntityProperties
-            .Where(p => !navigationOptions.PropertyOptions.Any(option => option.PropertyName == p.Name));
+            .Where(p => !navigationOptions.PropertyOptions.Any(option => option.PropertyName == p.Name)
+                        && !navigationOptions.CalculatedPropertyOptions.Any(option => option.PropertyName == p.Name));
         foreach (var notIncludedProperty in notIncludedProperties)
         {
             notIncludedProperty.IsHidden = true;

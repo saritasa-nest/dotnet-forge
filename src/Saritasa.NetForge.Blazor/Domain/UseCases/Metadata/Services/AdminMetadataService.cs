@@ -55,8 +55,6 @@ public class AdminMetadataService
 
             if (entityOptions != null)
             {
-                var calculatedProperties = GetCalculatedPropertiesMetadata(entityOptions);
-                entityMetadata.Properties.AddRange(calculatedProperties);
                 entityMetadata.ApplyOptions(entityOptions, adminOptions);
 
                 if (entityOptions.ExcludeAllProperties)
@@ -122,38 +120,6 @@ public class AdminMetadataService
         {
             items.Clear();
         }
-    }
-
-    /// <summary>
-    /// Retrieves metadata for calculated properties defined in the entity options.
-    /// </summary>
-    /// <param name="entityOptions">The entity options that specify the calculated properties.</param>
-    /// <returns>An enumerable collection of calculated property metadata.</returns>
-    private static IEnumerable<PropertyMetadata> GetCalculatedPropertiesMetadata(EntityOptions entityOptions)
-    {
-        var propertiesMetadata = new List<PropertyMetadata>();
-
-        foreach (var propertyName in entityOptions.CalculatedPropertyNames)
-        {
-            var propertyInformation = entityOptions.EntityType.GetProperty(propertyName);
-
-            if (propertyInformation == null)
-            {
-                continue;
-            }
-
-            var propertyMetadata = new PropertyMetadata
-            {
-                Name = propertyName,
-                IsEditable = false,
-                PropertyInformation = propertyInformation,
-                IsCalculatedProperty = true
-            };
-
-            propertiesMetadata.Add(propertyMetadata);
-        }
-
-        return propertiesMetadata;
     }
 
     /// <summary>
