@@ -37,4 +37,7 @@ public record EditEntityModel
     /// Action that called after entity update.
     /// </summary>
     public Action<IServiceProvider?, object, object>? AfterUpdateAction { get; init; }
+
+    /// <inheritdoc cref="EntityMetadata.EntitySaveMessage"/>
+    public string? EntitySaveMessage { get; init; }
 }

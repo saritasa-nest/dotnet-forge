@@ -287,4 +287,15 @@ public class AdminOptionsBuilder
         options.CustomHeadType = headType;
         return this;
     }
+
+    /// <summary>
+    /// Sets custom save message that displayed when an entity was saved successfully.
+    /// </summary>
+    /// <param name="entitySaveMessage">Entity save message.</param>
+    /// <returns>The current instance of <see cref="AdminOptionsBuilder"/>.</returns>
+    public AdminOptionsBuilder SetEntitySaveMessage(string entitySaveMessage)
+    {
+        options.EntitySaveMessage = entitySaveMessage;
+        return this;
+    }
 }

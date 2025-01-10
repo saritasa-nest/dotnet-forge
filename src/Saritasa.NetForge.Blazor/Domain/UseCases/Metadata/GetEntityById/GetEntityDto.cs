@@ -50,4 +50,7 @@ public record GetEntityDto
 
     /// <inheritdoc cref="EntityMetadata.CanDelete"/>
     public bool CanDelete { get; set; }
+
+    /// <inheritdoc cref="EntityMetadata.EntitySaveMessage"/>
+    public string? EntitySaveMessage { get; set; }
 }

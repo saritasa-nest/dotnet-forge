@@ -207,4 +207,15 @@ public class EntityOptionsBuilder<TEntity> where TEntity : class
         options.IncludedProperties.AddRange(propertyNames);
         return this;
     }
+
+    /// <summary>
+    /// Sets custom save message that displayed when the entity was saved successfully.
+    /// </summary>
+    /// <param name="entitySaveMessage">Entity save message.</param>
+    /// <returns>The current instance of <see cref="AdminOptionsBuilder"/>.</returns>
+    public EntityOptionsBuilder<TEntity> SetEntitySaveMessage(string entitySaveMessage)
+    {
+        options.EntitySaveMessage = entitySaveMessage;
+        return this;
+    }
 }

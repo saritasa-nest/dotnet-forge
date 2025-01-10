@@ -96,4 +96,9 @@ public class EntityMetadata
     /// Determines that entity can be deleted.
     /// </summary>
     public bool CanDelete { get; set; } = true;
+
+    /// <summary>
+    /// Custom message when the entity was saved successfully.
+    /// </summary>
+    public string? EntitySaveMessage { get; set; }
 }
