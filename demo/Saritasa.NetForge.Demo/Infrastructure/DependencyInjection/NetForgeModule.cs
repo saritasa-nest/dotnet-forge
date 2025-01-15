@@ -1,4 +1,5 @@
 ﻿using Saritasa.NetForge.Blazor.Extensions;
+using Saritasa.NetForge.Demo.Admin;
 using Saritasa.NetForge.Demo.Constants;
 using Saritasa.NetForge.Demo.Infrastructure.Admin;
 using Saritasa.NetForge.Demo.Infrastructure.Extensions;
@@ -27,6 +28,14 @@ internal static class NetForgeModule
                     new() { Name = GroupConstants.Shops }
                 })
                 .SetGroupHeadersExpanded(true)
+                .SetCustomHeadType(typeof(AdminHead))
+                .SetStaticBodyComponentType(typeof(AdminFooterStatic))
+                .SetInteractiveBodyContent(builder =>
+                {
+                    builder.OpenComponent<AdminFooter>(0);
+                    builder.AddAttribute(1, nameof(AdminFooter.VisitorsCount), 1234);
+                    builder.CloseComponent();
+                })
                 .ConfigureEntity(new ShopAdminConfiguration(services))
                 .ConfigureEntity<ProductTag>(entityOptionsBuilder =>
                 {

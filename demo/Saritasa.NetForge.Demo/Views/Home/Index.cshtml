@@ -1,4 +1,4 @@
-@using Saritasa.NetForge.Demo.Controllers
+@using Saritasa.NetForge.Demo.Admin
 @model Saritasa.NetForge.Demo.ViewModels.HomeViewModel
 @{
     Layout = "_Layout";
@@ -10,3 +10,6 @@
         <h5><a href="@Model.AdminPanelUrl">Go to the Admin panel</a></h5>
     </div>
 </div>
+
+<component type="typeof(AdminFooter)" render-mode="ServerPrerendered" />
+

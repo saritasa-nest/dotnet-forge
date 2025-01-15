@@ -1,4 +1,5 @@
-﻿using Saritasa.NetForge.Domain.Attributes;
+﻿using Microsoft.AspNetCore.Components;
+using Saritasa.NetForge.Domain.Attributes;
 using Saritasa.NetForge.Domain.Entities.Options;
 using Saritasa.NetForge.DomainServices.Interfaces;
 using Saritasa.NetForge.Infrastructure.Abstractions.Interfaces;
@@ -285,6 +286,29 @@ public class AdminOptionsBuilder
     public AdminOptionsBuilder SetCustomHeadType(Type headType)
     {
         options.CustomHeadType = headType;
+        return this;
+    }
+
+    /// <summary>
+    /// Sets interactive content to render in the end of the body section
+    /// but before section added using <see cref="SetStaticBodyComponentType"/>.
+    /// </summary>
+    /// <param name="interactiveBodyContent">Interactive content.</param>
+    /// <returns>The current instance of <see cref="AdminOptionsBuilder"/>.</returns>
+    public AdminOptionsBuilder SetInteractiveBodyContent(RenderFragment interactiveBodyContent)
+    {
+        options.InteractiveBodyContent = interactiveBodyContent;
+        return this;
+    }
+
+    /// <summary>
+    /// Sets type of component that contains non-interactive content to render in the end of the body section.
+    /// </summary>
+    /// <param name="staticBodyComponentType">Component type with static content.</param>
+    /// <returns>The current instance of <see cref="AdminOptionsBuilder"/>.</returns>
+    public AdminOptionsBuilder SetStaticBodyComponentType(Type staticBodyComponentType)
+    {
+        options.StaticBodyComponentType = staticBodyComponentType;
         return this;
     }
 }

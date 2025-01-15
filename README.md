@@ -14,6 +14,7 @@ The **NetForge** is a library that provides a user-friendly and intuitive user i
   - [Customizing the UI](#customizing-the-ui)
     - [Main Layout Overriding](#main-layout-overriding)
     - [Head Tag Overriding](#head-tag-overriding)
+    - [Custom Body Content](#custom-body-content)
     - [Create Groups for Entities](#create-groups-for-entities)
     - [Configuration](#configuration)
     - [Headers Expansion](#headers-expansion)
@@ -253,6 +254,52 @@ Example:
 <MudDialogProvider />
 ...
 ...
+```
+
+### Custom Body Content
+
+You can add some content to the end of the body section of admin site. 
+Static and interactive content can be added separately.
+
+#### Static Content
+
+Interactive content will be rendered by your custom component type.
+
+```csharp
+services.AddNetForge(optionsBuilder =>
+{
+    optionsBuilder.SetStaticBodyComponentType(typeof(AdminFooterStatic));
+});
+```
+
+#### Interactive Content
+
+Interactive content can be built using [RenderTreeBuilder](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-9.0).
+Note that JavaScript script tags should not be here. If you need JavaScript then put it to the static content section.
+But you can import JavaScript file in your component to use it, in this case you will not need script tag.
+Like in `JsCollocation2` example [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/location-of-javascript?view=aspnetcore-9.0).
+
+```csharp
+services.AddNetForge(optionsBuilder =>
+{
+    optionsBuilder.SetInteractiveBodyContent(builder =>
+        {
+            builder.OpenComponent<AdminFooter>(0);
+            builder.AddAttribute(1, nameof(AdminFooter.VisitorsCount), 1234);
+            builder.CloseComponent();
+        })
+});
+```
+
+#### Using CSS
+
+To use CSS in custom body sections you should add it to [Custom Head Section](#head-tag-overriding).
+Also, you can use scoped CSS, in this case you should add bundled styles according to [this](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-9.0).
+For example:
+
+```html
+<link href="Saritasa.NetForge.Demo.styles.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 ```
 
 ### Create Groups for Entities

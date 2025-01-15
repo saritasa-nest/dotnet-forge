@@ -1,4 +1,6 @@
-﻿namespace Saritasa.NetForge.Domain.Entities.Options;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace Saritasa.NetForge.Domain.Entities.Options;
 
 /// <summary>
 /// Admin panel options.
@@ -95,4 +97,18 @@ public class AdminOptions
     /// The optional type of custom head for the admin panel.
     /// </summary>
     public Type? CustomHeadType { get; set; }
+
+    /// <summary>
+    /// Interactive content to render in the end of the body but before <see cref="StaticBodyComponentType"/>.
+    /// </summary>
+    public RenderFragment? InteractiveBodyContent { get; set; }
+
+    /// <summary>
+    /// Type of component that contains non-interactive content to render in the end of the body section.
+    /// </summary>
+    /// <remarks>
+    /// We have separate static body because JS scripts have to be placed after
+    /// <script src="_framework/blazor.server.js"></script> in _NetForgeLayout.cshtml.
+    /// </remarks>
+    public Type? StaticBodyComponentType { get; set; }
 }
